@@ -15,13 +15,7 @@ logger = logging.getLogger(__name__)
 # This ensures pytesseract can locate the Tesseract OCR engine
 if platform.system() == 'Windows':
     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-elif platform.system() == 'Linux':
-    # On most Linux distributions, tesseract is installed in the PATH
-    pass
-elif platform.system() == 'Darwin':  # macOS
-    # On macOS, you might need to set this depending on installation method
-    # pytesseract.pytesseract.tesseract_cmd = '/usr/local/bin/tesseract'
-    pass
+
 
 # For batch processing
 INPUT_DIR = "lbmaske"
